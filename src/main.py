@@ -6,16 +6,8 @@ from os import listdir
 from os.path import isfile, join
 from S3.S3Manager import S3Manager
 
-from PIL import Image, ImageSequence
 
 def main(argv):
-    im = Image.open("D:\\Maestria\\Cloud Computing\\VideoProcessing\\VideoProcessingLambda\\videos\\video.mp4")
-    index = 1
-    for frame in ImageSequence.Iterator(im):
-        frame.save("D:\\Maestria\\Cloud Computing\\VideoProcessing\\VideoProcessingLambda\\videos\\frame%d.png" % index)
-        index = index + 1
-
-def main1(argv):
 
     directory = argv[1]
     print(directory)
